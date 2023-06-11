@@ -67,17 +67,28 @@ function generateBoard() {
         }
     }
 }
+//Check new board size
+function checkBoardSize() {
+    let boardsize = document.getElementById('gridNum').value;
+    if (boardsize > 100){
+        alert(`Max Board size is 100, you cannot use ${boardsize} please try again. . .`);
+        return false;
+    }
+    return true;
+}
 //remove board
 function clearBoard() {
-    console.log('Clear Board Called');
-    //Clear Board
-    const gridSquares = document.querySelectorAll('div');
-        //console.log(btnSettings); <-- Use to view button attributes
-    gridSquares.forEach((gridSquare) => {
-        if(gridSquare.className == "gridSquare"){
-            gridSquare.remove();
-        }
-    })
-    //Generate new board
-    generateBoard();
+    if(checkBoardSize() == true){
+        console.log('Clear Board Called');
+        //Clear Board
+        const gridSquares = document.querySelectorAll('div');
+            //console.log(btnSettings); <-- Use to view button attributes
+        gridSquares.forEach((gridSquare) => {
+            if(gridSquare.className == "gridSquare"){
+                gridSquare.remove();
+            }
+        })
+        //Generate new board
+        generateBoard();
+    }
 }
