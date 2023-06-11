@@ -19,7 +19,7 @@ body {
 
 }
 #gameBox {
-    min-width: 85%;
+    width: 85%;
     min-height: 85%;
     background-color: antiquewhite;
     border-color: black;
@@ -54,12 +54,26 @@ h1 {
 }
 input {
     width: 80%;
+    text-align: center;
+}
+button {
+    width: 90%;
+}
+#penColor {
+    background-color: black;
+    color: white;
+    border-radius: 25%;
+    padding:10px
 }
 #sketchPad {
     height: 100%;
     width: 90%;
     background-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
-button {
-    width: 90%;
+.gridSquare {
+    background-color: white;
+    display:flex;
+    justify-content: center;
 }

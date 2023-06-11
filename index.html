@@ -19,8 +19,8 @@
             <div id="options">
                 <div id="settings">
                     <p id="penColor">Pen Color</p>
-                    <input type="text"id="gridNum" value="0">
-                    <button id="btnClear">Clear</button>
+                    <input type="text"id="gridNum" value="16">
+                    <button id="btnClear" onClick="clearBoard();">Reset</button>
                 </div>
                 <button class="btnColor">Red</button>
                 <button class="btnColor">Green</button>
@@ -35,7 +35,12 @@
             </div>
         </div>
     <!--Version-->
-    <h5 id="version">Version 0.1</h5>
+    <h5 id="version">Version 0.2</h5>
     </div>
 </body>
+<script>
+    generateBoard();
+    addSettingsListeners();
+    setPenColor("Black");
+</script>
 </html>
